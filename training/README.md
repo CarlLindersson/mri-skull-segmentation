@@ -17,7 +17,7 @@ The tested training setup uses a compatible NVIDIA GPU. An existing environment 
 
 ## 2. Get initial weights
 
-Download the model ZIP from the repository's **Releases** page, when available. Extract its contents into `model/`, so `plans.json`, `dataset.json`, and `fold_all/checkpoint_final.pth` are present. Code downloads alone do not include weights. If no release exists, export a trusted local model using the procedure in `inference/README.md`, then use its directory with `--initial-model` below.
+Download the [model weights (v0.1.0)](https://github.com/CarlLindersson/mri-skull-segmentation/releases/download/v0.1.0/skull-model-v0.1.0.zip.zip) from the [published release](https://github.com/CarlLindersson/mri-skull-segmentation/releases/tag/v0.1.0). Extract the archive contents into `model/`, so `plans.json`, `dataset.json`, and `fold_all/checkpoint_best.pth` are present. The download has a `.zip.zip` filename; extract it as a normal ZIP archive. Code downloads alone do not include weights.
 
 ## 3. Export aligned MRI/label pairs in Slicer
 
@@ -64,7 +64,7 @@ Use a new workspace when changing the dataset. A one-volume experiment needs `--
 ## 6. Fine-tune
 
 ```powershell
-python training/train.py --workspace "C:\data\skull-training" --configuration 2d --folds all --initial-model model --epochs 100
+python training/train.py --workspace "C:\data\skull-training" --configuration 2d --folds all --initial-model model --checkpoint checkpoint_best.pth --epochs 100
 ```
 
 This retains all weights, including output layers; uses the released architecture/preprocessing; and starts a new optimizer at learning rate 0.001. All layers are trainable. The example schedules 100 epochs; the default is 1,000. For best weights, add `--checkpoint checkpoint_best.pth`. Change `--initial-model` if your local export is elsewhere.
