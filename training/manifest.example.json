@@ -1,0 +1,6 @@
+{
+  "cases": [
+    {"id": "case001", "animal_id": "animal001", "image": "case001.nii.gz", "label": "case001_label.nii.gz"},
+    {"id": "case002", "animal_id": "animal002", "image": "case002.nii.gz", "label": "case002_label.nii.gz"}
+  ]
+}

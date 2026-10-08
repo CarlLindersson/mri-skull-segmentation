@@ -1,0 +1,55 @@
+# Training workspaces and metadata
+nnUNet_raw/
+nnUNet_preprocessed*/
+preprocessed_*/
+nnUNet_results/
+manifest.json
+manifest_*volumes.json
+preprocessing_*.json
+training_settings_*.json
+.test-output/
+*.zip
+*.log
+labels*/
+images*/
+validation/
+predictions/
+dataset_fingerprint.json
+source_manifest.json
+splits_final.json
+training_log*
+progress.png
+
+# Scans, labels, surfaces and Slicer scenes anywhere in this repository
+*.nii
+*.nii.gz
+*.nrrd
+*.nhdr
+*.mha
+*.mhd
+*.dcm
+*.stl
+*.vtk
+*.vtp
+*.seg.*
+*.mrB
+*.mrb
+*.npz
+*.npy
+*.b2nd
+*.pkl
+
+# Weights should be distributed via releases or deliberately configured Git LFS
+*.pth
+*.pt
+
+# Local Python/editor files
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local preview/download packages are distributed through releases.
+model-preview/
