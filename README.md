@@ -37,7 +37,7 @@ Both setups use the same model download. Run prediction in this terminal, outsid
 
 ## 2. Download the model
 
-Download the [model weights (v0.1.0)](https://github.com/CarlLindersson/mri-skull-segmentation/releases/download/v0.1.0/skull-model-v0.1.0.zip.zip) from the [published release](https://github.com/CarlLindersson/mri-skull-segmentation/releases/tag/v0.1.0). The source-code ZIP does not contain the model weights. The download currently has a `.zip.zip` filename; extract it as a normal ZIP archive.
+Download the [model weights (v0.1.0)](https://github.com/CarlLindersson/mri-skull-segmentation/releases/download/v0.1.0/skull-model-v0.1.0.zip.zip) from this link or from the [published release](https://github.com/CarlLindersson/mri-skull-segmentation/releases/tag/v0.1.0). The source-code ZIP does not contain the model weights.
 
 Extract the model contents into `model/` so the files are arranged like this:
 
